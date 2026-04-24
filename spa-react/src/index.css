@@ -1,0 +1,269 @@
+﻿:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  color: #111827;
+  background-color: #f8fafc;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 100% 0, #dbeafe 0%, rgba(219, 234, 254, 0) 30%),
+    radial-gradient(circle at 0 20%, #e2e8f0 0%, rgba(226, 232, 240, 0) 35%),
+    #f8fafc;
+}
+
+a {
+  color: inherit;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  border-bottom: 1px solid #d1d5db;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(6px);
+}
+
+.topbar__inner {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0.85rem 1rem;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.brand {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.main-nav {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.main-nav__link {
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #111827;
+}
+
+.main-nav__link.active {
+  background: #e0e7ff;
+  color: #1e3a8a;
+  font-weight: 700;
+}
+
+.search-form {
+  display: flex;
+  justify-self: end;
+  gap: 0.5rem;
+  width: min(100%, 360px);
+}
+
+.search-form__input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.95rem;
+}
+
+.search-form__button {
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  padding: 0.55rem 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.page-container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 2rem;
+}
+
+.page-title {
+  margin: 0;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  color: #0f172a;
+}
+
+.page-subtitle {
+  margin: 0.5rem 0 0;
+  color: #334155;
+}
+
+.search-page-form {
+  margin: 1rem 0;
+}
+
+.search-page-form .search-form {
+  justify-self: start;
+}
+
+.movie-grid {
+  margin-top: 1.1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.movie-card {
+  border: 1px solid #dbe0e6;
+  border-radius: 14px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-card__poster {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  background: #e2e8f0;
+}
+
+.movie-card__content {
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  height: 100%;
+}
+
+.movie-card h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #0f172a;
+}
+
+.movie-card__meta {
+  margin: 0;
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+.movie-card__overview {
+  margin: 0;
+  color: #1e293b;
+  font-size: 0.92rem;
+}
+
+.movie-card__link {
+  margin-top: auto;
+  align-self: flex-start;
+  text-decoration: none;
+  padding: 0.45rem 0.7rem;
+  border-radius: 8px;
+  background: #0f172a;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.movie-detail {
+  margin-top: 0.5rem;
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) minmax(280px, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.movie-detail__poster {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.15);
+}
+
+.movie-detail__content {
+  padding: 1rem;
+  border: 1px solid #dbe0e6;
+  border-radius: 14px;
+  background: white;
+}
+
+.movie-detail__content h1 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  color: #0f172a;
+}
+
+.movie-detail__content h2 {
+  margin: 1rem 0 0.5rem;
+  color: #0f172a;
+}
+
+.status-box {
+  margin-top: 1rem;
+  border: 1px dashed #94a3b8;
+  border-radius: 12px;
+  padding: 1rem;
+  background: #f8fafc;
+}
+
+.status-box h2 {
+  margin: 0;
+  color: #0f172a;
+}
+
+.status-box p {
+  margin: 0.45rem 0 0;
+  color: #334155;
+}
+
+@media (max-width: 960px) {
+  .topbar__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .main-nav {
+    justify-content: start;
+  }
+
+  .search-form {
+    justify-self: start;
+    width: 100%;
+  }
+
+  .movie-detail {
+    grid-template-columns: 1fr;
+  }
+}
+

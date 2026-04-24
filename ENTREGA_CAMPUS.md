@@ -2,7 +2,7 @@
 
 ## Enlace al repositorio
 
-- Repositorio principal: [Pegar aquí URL GitHub/GitLab]
+- Repositorio principal: https://github.com/DabeefMaster/React2.git
 
 ## Acceso docente
 
